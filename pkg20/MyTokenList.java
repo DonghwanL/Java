@@ -7,12 +7,13 @@ import java.util.StringTokenizer;
 public class MyTokenList {
 
 	public static void main(String[] args) {
-		String str = "¼Ò³à½Ã´ë ¿ø´õ°É½º ºò¹ğ";
+		String str = "ì†Œë…€ì‹œëŒ€ ì›ë”ê±¸ìŠ¤ ë¹…ë±…";
 		
 		StringTokenizer st1 = new StringTokenizer(str);
 		
 		int cnttoken = st1.countTokens();
 		
+		// ì´ë¦„, í¬ê¸°, íƒ€ì…
 		String[] arr = new String[cnttoken];
 		
 		for (int i = 0; i < cnttoken; i++) {
@@ -20,7 +21,10 @@ public class MyTokenList {
 		}
 		
 		List<Object> arrList = new ArrayList<Object>();
-		arrList.add(arr);
+		
+		for (String item : arr) {
+			arrList.add(item); // ìŠ¹ê¸‰
+		}
 		
 		PrintFor(arrList);
 	}
@@ -33,3 +37,4 @@ public class MyTokenList {
 	}
 
 }
+
