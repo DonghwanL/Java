@@ -21,11 +21,18 @@ public class LottoTest {
 			}
 			lotto.add(su);
 		}
-
+		
 		lotto.remove(secondno);
 		
-		System.out.println("1µî ¹øÈ£ : " + lotto.toString());
-		System.out.println("2µî ¹øÈ£ : [" + secondno + "]");
+		Object[] obj = lotto.toArray();
+		Arrays.sort(obj);
+		
+		for (Object bunho : obj) {
+			System.out.print(bunho + "\t");
+		}
+		System.out.println();
+		
+		System.out.println("2ë“± ë²ˆí˜¸ : [" + secondno + "]");
 
 	}
 
